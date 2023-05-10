@@ -1,0 +1,21 @@
+.actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.editButton {
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #BAC4E7;
+    border: none;
+
+}
+
+.deleteButton {
+    background: #E7BDBA;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}

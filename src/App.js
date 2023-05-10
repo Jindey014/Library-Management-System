@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbars from './Components/Navbar/Navbars';
+import Booklist from './Components/Booklist/Booklist';
+import { Provider } from 'react-redux';
+// import store from './redux/store';
+import BookContextProvider from './Context/BookContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Navbars />
+      <Routes>
+        <Route path='/' element={<Booklist />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
